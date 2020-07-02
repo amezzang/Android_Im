@@ -24,4 +24,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="메뉴" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="이름을 입력하세요"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="나이를 입력하세요"
+        android:inputType="textPersonName" />
 </LinearLayout>
