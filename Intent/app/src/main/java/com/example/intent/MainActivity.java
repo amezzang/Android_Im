@@ -43,10 +43,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class); // 현재 화면에서 지정된 화면으로 넘기겠다.
-                String name = editText.getText().toString();
-                String age = editText2.getText().toString(); //사용자로부터 입력받은 값들을 저장
+                String name = editText.getText().toString(); // 이름
+                String age = editText2.getText().toString(); //사용자로부터 입력받은 값들을 저장 , 나이
+
+                // int형배열 넘기기
+                int arr[] = new int[8];
+                for(int i = 0; i<8; i++)arr[i] = i;
+
                 intent.putExtra("name",name); // key와 value를 보낸다
                 intent.putExtra("age", age);
+                intent.putExtra("arrInt", arr);
                 startActivityForResult(intent,101);
                 // 101은 어떤 화면으로 부터 왔는지 구분할 수 있는 코드
             }

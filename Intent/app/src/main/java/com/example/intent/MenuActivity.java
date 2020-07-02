@@ -24,9 +24,13 @@ public class MenuActivity extends AppCompatActivity {
         String name = intent.getExtras().getString("name");
         String age = intent.getExtras().getString("age");
 
+        // 배열값 받기
+        int arr[] = intent.getExtras().getIntArray("arrInt");
+
         // textview는 string값만 넣을 수 있어서 int를 string으로 변환후 뿌려준다.
+        // 변환이 필요없으면 그냥 뿌려주자
         textView.setText(name); // 화면에 뿌려준다
-        textView2.setText(String.valueOf(age));
+        textView2.setText(String.valueOf(arr[2])); // 3번째 배열값만 띄워보자
 
         Button btnBack = findViewById(R.id.button4);
         btnBack.setOnClickListener(new View.OnClickListener() {
